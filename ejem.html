@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invertir Texto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        textarea {
+            width: 300px;
+            height: 100px;
+            margin-bottom: 10px;
+            display: block;
+            margin: auto;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Invertir Texto</h2>
+
+    <textarea id="inputText" placeholder="Escribe aquí..."></textarea>
+    <button onclick="invertirTexto()">Invertir</button>
+    <textarea id="outputText" readonly placeholder="Resultado"></textarea>
+
+    <script>
+        function invertirTexto() {
+            let texto = document.getElementById("inputText").value;
+            let textoInvertido = texto.split('').reverse().join('');
+            document.getElementById("outputText").value = textoInvertido;
+        }
+    </script>
+
+</body>
+</html>
